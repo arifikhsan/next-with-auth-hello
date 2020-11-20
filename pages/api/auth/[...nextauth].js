@@ -73,6 +73,9 @@ const options = {
      *                           Return `false` to deny access
      */
     signIn: async (user, account, profile) => {
+      console.log('signIn user: ', user)
+      console.log('signIn account: ', account)
+      console.log('signIn profile: ', profile)
       return true
     },
 
@@ -84,6 +87,8 @@ const options = {
      * @return {object}              Session that will be returned to the client
      */
     session: async (session, user) => {
+      console.log('session user: ', user)
+      console.log('session session: ', session)
       //session.customSessionProperty = 'bar'
       return Promise.resolve(session)
     },
